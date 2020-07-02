@@ -14,6 +14,7 @@ header {
 }
 .menu {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-self: start;
   align-items: center;
@@ -40,8 +41,11 @@ header {
 }
 
 .menu li a {
-  color: black;
+  color: var(--clr-txt-black);
   text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
 }
 .menu li a:hover {
   color: var(--clr-red);
@@ -54,22 +58,33 @@ header {
 }
 
 @media (min-width: 767px) {
-  .container {
-    width: 880px;
-    max-width: 1400px;
-  }
-
   header {
     max-width: 1280px;
     margin: 0 auto;
+    padding-left: 52px;
+    padding-right: 108px;
   }
   .menu {
-    display: block;
+    display: flex;
+    height: inherit;
+    position: inherit;
+    align-items: center;
+    flex-direction: row;
+    transform: inherit;
+    width: inherit;
+    margin: inherit;
+    box-shadow: inherit;
+    background-color: inherit;
+    margin: 0;
+    align-self: center;
   }
 
-  .menu ul {
-    display: flex;
+  .menu li {
+    min-height: inherit;
+    transform: inherit;
+    margin: 0 12px;
   }
+
   .menu-mobile-i {
     display: none;
   }
