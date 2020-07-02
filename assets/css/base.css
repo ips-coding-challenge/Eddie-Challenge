@@ -1,0 +1,36 @@
+:root {
+  --clr-blue: rgba(45, 156, 219, 0.7);
+  --clr-green: rgba(39, 174, 96, 0.7);
+  --clr-red: rgba(235, 87, 87, 0.7);
+  --clr-txt-grey: #828282;
+  --clr-txt-p: #4f4f4f;
+  --clr-txt-black: #333333;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1110px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
