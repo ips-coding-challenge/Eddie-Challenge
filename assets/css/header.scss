@@ -1,0 +1,57 @@
+// Header
+header {
+  padding: 13px 17px 13px 10px;
+  height: 60px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: "Heeboo", sans-serif;
+  font-weight: 800;
+}
+.nav-menu {
+  position: fixed;
+  background-color: white;
+  z-index: 1000;
+  width: 250px;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  & .nav-item {
+    margin: 20px 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100px);
+
+    & .nav-link {
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      text-decoration: none;
+      color: var(--clr-gray1);
+
+      &.active,
+      &:hover {
+        color: var(--clr-red);
+      }
+    }
+  }
+}
+.hidden {
+  overflow: hidden;
+}
+.open {
+  transform: translateX(0);
+}
+.translate {
+  transform: translateX(0) !important;
+}

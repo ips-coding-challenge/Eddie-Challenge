@@ -2,14 +2,16 @@ if (module.hot) {
   module.hot.accept();
 }
 
+const S = (el) => document.querySelector(el);
+
 let menuOpen = false;
-const toggle = document.getElementById("toggle");
+const toggle = S(".nav-toggle");
 
 toggle.addEventListener("click", (e) => {
   e.preventDefault();
   menuOpen = !menuOpen;
-  const menu = document.querySelector(".menu");
-  const main = document.querySelector(".main");
+  const menu = S(".nav-menu");
+  const main = S(".main");
   menu.classList.toggle("open");
   document.body.classList.toggle("hidden");
   main.classList.toggle("hidden");
@@ -18,7 +20,7 @@ toggle.addEventListener("click", (e) => {
 });
 
 function animateMenu() {
-  let items = document.querySelectorAll(".menu li");
+  let items = document.querySelectorAll(".nav-item");
   console.log(`items`, items);
 
   if (menuOpen) {

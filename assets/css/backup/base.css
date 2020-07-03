@@ -2,19 +2,25 @@
   --clr-blue: rgba(45, 156, 219, 0.7);
   --clr-green: rgba(39, 174, 96, 0.7);
   --clr-red: rgba(235, 87, 87, 0.7);
-  --clr-txt-grey: #828282;
-  --clr-txt-p: #4f4f4f;
-  --clr-txt-black: #333333;
+  --clr-gray1: #333333;
+  --clr-gray2: #4f4f4f;
+  --clr-gray3: #828282;
+  --clr-gray4: #bdbdbd;
+  --clr-gray6: #f2f2f2;
 }
 
 *,
 *::before,
 *::after {
-  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
 }
 
 h1,
@@ -30,8 +36,8 @@ input {
 }
 
 .container {
-  /* max-width: 1110px; */
-  padding: 0 40px;
+  max-width: 1110px;
+  /* padding: 0 40px; */
   margin: 0 auto;
 }
 
@@ -76,7 +82,7 @@ img {
   background: var(--clr-red);
 }
 /* Utility */
-.full-width {
+/* .full-width {
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
@@ -85,7 +91,7 @@ img {
   right: 50%;
   width: 100vw;
   padding: 0 10px;
-}
+} */
 
 @media (min-width: 576px) {
   .container {
