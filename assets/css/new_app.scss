@@ -51,6 +51,10 @@ p {
 .container-lg {
   padding: 0 10px !important;
 }
+// .container-sm {
+//   max-width: 320px;
+//   margin: initial;
+// }
 
 h2 {
   font-size: 24px;
@@ -130,6 +134,8 @@ input::placeholder {
 
 // Home
 .home {
+  margin-top: 48px;
+
   .question {
     font-size: 1.2rem;
     line-height: 1.8rem;
@@ -149,5 +155,30 @@ input::placeholder {
 
   .form {
     margin-top: 31px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .container-sm {
+    max-width: 50%;
+  }
+}
+
+@media screen and(min-width: 860px) {
+  .container {
+    padding: 0 150px;
+  }
+
+  .home {
+    margin-top: 100px;
+  }
+  .home__image {
+    margin: 42px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 250px;
   }
 }

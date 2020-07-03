@@ -1,9 +1,10 @@
 // Header
 header {
-  padding: 13px 17px 13px 10px;
-  height: 60px;
+  max-width: 1110px;
+  margin: 0 auto;
 }
 nav {
+  padding: 13px 17px 13px 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -54,4 +55,41 @@ nav {
 }
 .translate {
   transform: translateX(0) !important;
+}
+
+@media screen and (min-width: 860px) {
+  .nav {
+    padding: 42px 108px 0 52px;
+  }
+  .nav-brand {
+    font-weight: 800;
+    font-size: 3.6rem;
+    line-height: 5.3rem;
+  }
+  .nav-menu {
+    position: initial;
+    transform: initial;
+    background-color: initial;
+    flex-direction: initial;
+    width: initial;
+    overflow-y: initial;
+
+    .nav-item {
+      margin: initial;
+      transform: initial;
+
+      .nav-link {
+        font-weight: 500;
+        font-size: 2.2rem;
+        line-height: 3.6rem;
+      }
+    }
+    .nav-item:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  .nav-toggle {
+    display: none;
+  }
 }
