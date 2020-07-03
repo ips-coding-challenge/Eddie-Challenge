@@ -7,6 +7,7 @@ nav {
   padding: 13px 17px 13px 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-brand {
@@ -26,6 +27,7 @@ nav {
   justify-content: center;
   align-items: center;
   overflow-y: auto;
+  overflow-x: hidden;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 
@@ -45,6 +47,18 @@ nav {
         color: var(--clr-red);
       }
     }
+  }
+}
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--clr-red);
   }
 }
 .hidden {
