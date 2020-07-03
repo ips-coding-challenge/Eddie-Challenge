@@ -28,6 +28,7 @@ $grey: #e0e0e0;
 html {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -185,6 +186,9 @@ input::placeholder {
 .feature {
   margin-top: 94px;
   padding: 46px 35px;
+  border-radius: 24px;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
 
   h3 {
     margin-top: 3.5rem;
@@ -203,10 +207,8 @@ input::placeholder {
     margin-top: 30px;
   }
 
-  &.rounded {
-    background: #ffffff;
+  &:hover {
     box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
-    border-radius: 24px;
   }
 }
 
