@@ -1,4 +1,10 @@
+@use 'sass:color';
 @import url("./header.scss");
+// Test
+$blue: rgba(45, 156, 219, 0.7);
+$green: rgba(39, 174, 96, 0.7);
+$red: rgba(235, 87, 87, 0.7);
+$grey: #e0e0e0;
 
 :root {
   --clr-blue: rgba(45, 156, 219, 0.7);
@@ -55,10 +61,6 @@ p {
 .container-xl {
   padding: 0 10px !important;
 }
-// .container-sm {
-//   max-width: 320px;
-//   margin: initial;
-// }
 
 h2 {
   font-size: 2.4rem;
@@ -81,11 +83,17 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
 }
 
 .btn-default {
-  background-color: #e0e0e0;
+  background-color: $grey;
   color: #828282;
+
+  &:hover {
+    background-color: color.scale($grey, $lightness: -10%);
+  }
 }
 .btn-blue,
 .btn-green,
@@ -93,13 +101,24 @@ img {
   color: white;
 }
 .btn-blue {
-  background: var(--clr-blue);
+  background-color: $blue;
+
+  &:hover {
+    background-color: color.scale($blue, $lightness: -30%);
+  }
 }
 .btn-green {
-  background: var(--clr-green);
+  background-color: $green;
+
+  &:hover {
+    background-color: color.scale($green, $lightness: -30%);
+  }
 }
 .btn-red {
-  background: var(--clr-red);
+  background-color: $red;
+  &:hover {
+    background-color: color.scale($red, $lightness: -30%);
+  }
 }
 
 section {
@@ -110,8 +129,8 @@ section {
   margin-top: 31px;
 }
 .form label {
-  font-size: 10px;
-  line-height: 15px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--clr-gray3);
 }
 .btn-input {
@@ -131,8 +150,8 @@ input {
   max-width: 60%;
 }
 input::placeholder {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
   color: var(--clr-gray4);
 }
 
@@ -373,9 +392,37 @@ input::placeholder {
   .container-lg {
     padding: 0 40px !important;
   }
-  .container-sm {
-    max-width: 50%;
+
+  h2 {
+    font-size: 4.8rem;
+    line-height: 7.2rem;
   }
+
+  .home {
+    p {
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+    }
+  }
+
+  .form {
+    label {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+    }
+  }
+  input::placeholder {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+  .work {
+    &__type {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+    }
+  }
+
   .features-list {
     display: flex;
   }
@@ -402,6 +449,10 @@ input::placeholder {
 @media screen and(min-width: 860px) {
   .container {
     padding: 0 150px;
+  }
+
+  .container-sm {
+    max-width: 370px;
   }
 
   .container-lg {

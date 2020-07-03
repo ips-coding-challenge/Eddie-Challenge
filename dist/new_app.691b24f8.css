@@ -185,11 +185,16 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
 }
 
 .btn-default {
   background-color: #e0e0e0;
   color: #828282;
+}
+.btn-default:hover {
+  background-color: #cacaca;
 }
 
 .btn-blue,
@@ -199,15 +204,24 @@ img {
 }
 
 .btn-blue {
-  background: var(--clr-blue);
+  background-color: rgba(45, 156, 219, 0.7);
+}
+.btn-blue:hover {
+  background-color: rgba(27, 110, 158, 0.7);
 }
 
 .btn-green {
-  background: var(--clr-green);
+  background-color: rgba(39, 174, 96, 0.7);
+}
+.btn-green:hover {
+  background-color: rgba(27, 122, 67, 0.7);
 }
 
 .btn-red {
-  background: var(--clr-red);
+  background-color: rgba(235, 87, 87, 0.7);
+}
+.btn-red:hover {
+  background-color: rgba(201, 24, 24, 0.7);
 }
 
 section {
@@ -219,8 +233,8 @@ section {
 }
 
 .form label {
-  font-size: 10px;
-  line-height: 15px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--clr-gray3);
 }
 
@@ -243,8 +257,8 @@ input {
 }
 
 input::placeholder {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
   color: var(--clr-gray4);
 }
 
@@ -448,8 +462,29 @@ input::placeholder {
     padding: 0 40px !important;
   }
 
-  .container-sm {
-    max-width: 50%;
+  h2 {
+    font-size: 4.8rem;
+    line-height: 7.2rem;
+  }
+
+  .home p {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+  .form label {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+
+  input::placeholder {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+  .work__type {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
   }
 
   .features-list {
@@ -475,6 +510,10 @@ input::placeholder {
 @media screen and (min-width: 860px) {
   .container {
     padding: 0 150px;
+  }
+
+  .container-sm {
+    max-width: 370px;
   }
 
   .container-lg {
