@@ -312,11 +312,14 @@ input::placeholder {
 }
 
 .feat-icon {
-  height: 67px;
-  width: 67px;
+  height: 6.7rem;
+  width: 6.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.feat-icon svg {
+  min-width: 3.2rem;
 }
 
 .works {
