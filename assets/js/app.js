@@ -5,13 +5,16 @@ if (module.hot) {
 const S = (el) => document.querySelector(el);
 
 let menuOpen = false;
+const menu = S(".nav-menu");
+const main = S(".main");
 const toggle = S(".nav-toggle");
+let items = document.querySelectorAll(".nav-item");
+const nav = S("nav");
 
 toggle.addEventListener("click", (e) => {
   e.preventDefault();
   menuOpen = !menuOpen;
-  const menu = S(".nav-menu");
-  const main = S(".main");
+
   menu.classList.toggle("open");
   document.body.classList.toggle("hidden");
   main.classList.toggle("hidden");
@@ -19,8 +22,18 @@ toggle.addEventListener("click", (e) => {
   animateMenu();
 });
 
+const navLinks = document.querySelectorAll(".nav-link");
+navLinks.forEach((nav) => {
+  nav.addEventListener("click", (e) => {
+    console.log(`Link clicked`);
+    menuOpen = !menuOpen;
+    menu.classList.remove("open");
+    document.body.classList.remove("hidden");
+    main.classList.remove("hidden");
+  });
+});
+
 function animateMenu() {
-  let items = document.querySelectorAll(".nav-item");
   console.log(`items`, items);
 
   if (menuOpen) {
